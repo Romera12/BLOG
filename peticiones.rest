@@ -1,0 +1,68 @@
+@host = http://localhost:3000
+
+### Get all authors
+GET http://localhost:3000/api/authors
+
+### Get an author by ID
+GET http://localhost:3000/api/authors/1
+
+### Create a new author
+POST http://localhost:3000/api/authors
+Content-Type: application/json
+
+{
+  "name": "author 1",
+  "email": "author1@example.com",
+  "image": "http://example.com/author1.jpg"
+}
+
+### Update an existing author
+PUT http://localhost:3000/api/authors/2
+Content-Type: application/json
+
+{
+  "name": "author 2 updated",
+  "email": "author2updated@example.com",
+  "image": "http://example.com/author2updated.jpg"
+}
+
+### Delete an author
+DELETE http://localhost:3000/api/authors/3
+
+---
+
+### Get all posts
+GET http://localhost:3000/api/posts
+
+### Get a post by ID
+GET http://localhost:3000/api/posts/1
+
+### Get all posts from an author
+GET http://localhost:3000/api/posts/author/1
+
+### Create a new post
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "title": "Nuevo post sobre SQL",
+  "description": "Consejos para mejorar tus consultas SQL.",
+  "creation_date": "2025-06-16 10:00:00",
+  "category": "Bases de datos",
+  "author_id": 1
+}
+
+### Update an existing post
+PUT http://localhost:3000/api/posts/2
+Content-Type: application/json
+
+{
+  "title": "Guía avanzada de HTML",
+  "description": "Contenido actualizado para desarrollo web.",
+  "creation_date": "2025-06-14 15:45:00",
+  "category": "Desarrollo Web",
+  "author_id": 2
+}
+
+### Delete a post
+DELETE http://localhost:3000/api/posts/3
